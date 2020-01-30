@@ -6,7 +6,7 @@ describe('Bad usage', function () {
 
   it('Full grounds does not block coffee', function () {
     // You keep getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
-    // Tags: priority:2
+    // Tags: priority:low
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // And I handle everything except the grounds
@@ -15,7 +15,7 @@ describe('Bad usage', function () {
     this.actionwords.iTakeCoffeeNumberCoffees(50);
     // Then message "Empty grounds" should be displayed
     this.actionwords.messageMessageShouldBeDisplayed("Empty grounds");
-    // And coffee should be served
-    this.actionwords.coffeeShouldBeServed();
+    // And coffee should be served quickly "value 1"
+    this.actionwords.coffeeShouldBeServedQuickly("value 1");
   });
 });

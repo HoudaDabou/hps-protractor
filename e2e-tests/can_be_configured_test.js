@@ -5,7 +5,7 @@ describe('Can be configured', function () {
   });
 
   it('Display settings', function () {
-    // Tags: priority:1
+    // Tags: priority:medium
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // When I switch to settings mode
@@ -15,7 +15,7 @@ describe('Can be configured', function () {
   });
 
   it('Default settings', function () {
-    // Tags: priority:0
+    // Tags: priority:high
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // When I switch to settings mode

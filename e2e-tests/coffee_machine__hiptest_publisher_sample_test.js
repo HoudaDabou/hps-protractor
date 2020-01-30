@@ -1,17 +1,15 @@
-describe('Serve coffee', function () {
+describe('Coffee machine - Hiptest publisher sample', function () {
   beforeEach(function () {
     this.actionwords = Object.create(require('./actionwords.js').Actionwords);
   browser.get('http://localhost:8000');
   });
 
-  it('Simple use', function () {
-    // Well, sometimes, you just get a coffee.
-    // Tags: priority:high
+  it('my new scenario', function () {
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // When I take a coffee
     this.actionwords.iTakeACoffee();
-    // Then coffee should be served quickly "value 1"
-    this.actionwords.coffeeShouldBeServedQuickly("value 1");
+    // Then the coffee machine provides me a delicious coffee
+    this.actionwords.theCoffeeMachineProvidesMeADeliciousCoffee();
   });
 });

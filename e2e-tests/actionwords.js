@@ -12,9 +12,11 @@ exports.Actionwords = {
     expect(element(by.id('message')).getText()).toEqual(message);
   },
 
-  coffeeShouldBeServed: function () {
+
+  coffeeShouldBeServedQuickly: function (my_param) {
     expect(element(by.id('coffee')).getAttribute('class')).toMatch('served');
   },
+  
 
   coffeeShouldNotBeServed: function () {
     expect(element(by.id('coffee')).getAttribute('class')).not.toMatch('served');
@@ -32,9 +34,9 @@ exports.Actionwords = {
     element(by.id('fillBeans')).click();
   },
 
-  iFillTheWaterTank: function () {
-    element(by.id('fillWater')).click();
-  },
+  // iFillTheWaterTank: function () {
+  //   element(by.id('fillWater')).click();
+  // },
 
   iTakeCoffeeNumberCoffees: function (coffee_number) {
     this.handled = this.handled || [];
@@ -100,5 +102,11 @@ exports.Actionwords = {
   },
 
   settingsShouldBe: function (__datatable) {
+  },
+
+  theCoffeeMachineProvidesMeADeliciousCoffee: function () {
+
+   // here add your code
+
   }
 };
